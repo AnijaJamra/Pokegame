@@ -1,93 +1,3 @@
-// import React, { useContext, useEffect, useState } from 'react'
-// import PokeContext from '../Contex/PokeContex' 
-// import { fetchPokemon } from '../Contex/PokeService'
-// import { useWindowSize } from 'react-use'
-// import Confetti from 'react-confetti'
-
-
-// const PokeCard = () => {
-
-// const { Pokemon, dispatch,  visibility, score } = useContext(PokeContext)
-
-// const [answer, setAnswer] = useState("")
-// const { width, height } = useWindowSize()
-
-// const checkAnswer = (e) => {
-//    e.preventDefault()
-
-//    if (answer === Pokemon.name) {
-//    //Increase Score
-//     dispatch({
-//           type: "INCREASE_SCORE"    
-//     })
-//     getPokemon()
-//    } else {
-//       //Dicrease life
-//     dispatch({type: "DECREASE_LIFE"})
-//     getPokemon()
-    
-//    }
-//    setAnswer("")
-// }
-
-
-// const getPokemon = async () => {
-//   dispatch({ type: "CHANGE_VISIBILITY"})
-// setTimeout(() => {
-//     dispatch({type : "CHANGE_VISIBILITY"})
-// }, 1000)
-
-//   const data = await fetchPokemon()
-//  //Getting Pokemon 
-// setTimeout(()=> {
-//         dispatch({
-//     type: "GET_POKEMON",
-//     payload: {
-//       name: data.name,
-//       imgURL: data.sprites.other.dream_world.front_default
-//     }
-//   });     
- 
-// }, 1500)
-// }
-
-
-// useEffect (()=>{
-//  getPokemon()
-// },[])
-
-
-// if(!Pokemon) {
-//   return (
-//     <h1 className='text-centre text-gray-400 text-2xl font-bold'>Loading...</h1>
-//   )
-// }
-
-// if(score === 100) {
-//    return <>
-//    <Confetti
-//       width={width}
-//       height={height}
-//     />
-//    <h1 className='text-center my-4 text-3xl font-bold'> YOU ARE WINNER</h1>
-
-//    </>
-
-
-
-//   return (
-//       <div className=' border border-gray-400  rounded-md p-4 flex justify-center items-center flex-col w-xl'>
-//         <img className= { !visibility ? 'h-70 brightness-0' : 'h-52'} src={Pokemon.imgURL}  alt="" />
-//         <form onSubmit={checkAnswer}>
-//           <input value={answer} onChange={(e) => setAnswer(e.target.value)} type="text" placeholder='Enter Pokemon Name' className='m-4 border-b-2 border-gray-400 w-100 p-2 outline-none' />
-//           <button className='bg-green-700 hover:bg-green-800 cursor-pointer p-1 rounded-sm text-white font-bold text-2xl w-full'>Submit Answer</button>
-//         </form>   
-  
-//     </div>
-//   )
-// }
- 
-// export default PokeCard
 
 import React, { useContext, useEffect, useState } from 'react'
 import PokeContext from '../Contex/PokeContex' 
@@ -163,7 +73,7 @@ const PokeCard = () => {
           onChange={(e) => setAnswer(e.target.value)}
           type="text"
           placeholder='Enter Pokemon Name'
-          className='m-4 border-b-2 border-gray-400 w-100 p-2 outline-none'
+          className='m-4 border-b-2 border-gray-400 w-130 p-2 outline-none'
         />
         <button className='bg-green-700 hover:bg-green-800 cursor-pointer p-1 rounded-sm text-white font-bold text-2xl w-full'>
           Submit Answer
