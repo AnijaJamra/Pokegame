@@ -7,7 +7,7 @@ const PokeContext = createContext ()
 export const PokeProvider = ({children}) => {
 
        const initialState = {
-        score : 90,
+        score : 70,
         life: 3,
         Pokemon : null,
         visibility : false
